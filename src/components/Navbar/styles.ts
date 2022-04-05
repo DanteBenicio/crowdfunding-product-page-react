@@ -1,11 +1,14 @@
 import styled from 'styled-components';
 
 export const Container = styled.header`
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
 
-  padding: 2rem 6rem;
+  z-index: 3;
+
+  padding: 2rem calc(100vw - 96%);
   margin-bottom: -6rem;
 
   max-width: 100vw;
@@ -62,5 +65,9 @@ export const List = styled.ul`
     &:hover {
       filter: brightness(90%);
     }
+  }
+
+  @media screen and (max-width: 768px) {
+    display: none;
   }
 `;
