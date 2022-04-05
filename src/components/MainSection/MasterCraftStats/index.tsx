@@ -19,7 +19,7 @@ export default function MasterCraftStats() {
         </TitleWrapper>
 
         <ButtonsWrapper>
-          <Button text="Back this project" />
+          <Button text="Back this project" showModalFn={setShowBackThisProjectModal} />
 
           <BookmarkContainer>
             <BookmarkWrapper>
