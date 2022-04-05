@@ -85,7 +85,7 @@ export default function BackThisProjectModalCard({
           <span>Enter your pledge</span>
           <ActionButtonsWrapper>
             <input type="number" id="pledge_input" />
-            <Button text="Continue" width={200} />
+            <Button text="Continue" width={200} fixedWidth={140} />
           </ActionButtonsWrapper>
         </ActionButtons>
       )}
