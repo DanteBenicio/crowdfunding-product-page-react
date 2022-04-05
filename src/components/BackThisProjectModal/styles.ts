@@ -8,6 +8,7 @@ export const Overlay = styled.div`
   min-height: 110vh;
   height: 100%;
   width: 100%;
+  padding: 0 1rem;
 
   background-color: rgba(0,0,0,0.4);
   z-index: 10;
@@ -46,6 +47,15 @@ export const Content = styled.div`
     right: 4%;
     display: inline-block;
     width: 15px;
+  }
+
+  @media screen and (max-width: 580px) {
+    padding: 2rem 1.5rem;
+
+    > #close_modal {
+      top: 2%;
+      right: 6%;
+    }
   }
 `;
 
