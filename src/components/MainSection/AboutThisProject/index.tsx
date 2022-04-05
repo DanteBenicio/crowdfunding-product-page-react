@@ -1,4 +1,3 @@
-import React from 'react';
 import Card from '../../Card';
 import { cardContent1, cardContent2, cardContent3 } from './cards-content';
 import { CardsWrapper, Container, ProjectInfo } from './styles';
@@ -19,7 +18,7 @@ export default function AboutThisProject() {
       <CardsWrapper>
         <Card {...cardContent1} />
         <Card {...cardContent2} />
-        <Card {...cardContent3} />
+        <Card {...cardContent3} outOfStock />
       </CardsWrapper>
     </Container>
   );
