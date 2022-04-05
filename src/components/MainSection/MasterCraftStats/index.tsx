@@ -7,6 +7,9 @@ import {
 } from './styles';
 
 export default function MasterCraftStats() {
+  const { setShowBackThisProjectModal } = useContext(AppContext);
+  const [marked, setMarked] = useState<boolean>(false);
+
   return (
     <Container>
       <FirstCard>
