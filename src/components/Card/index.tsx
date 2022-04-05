@@ -24,7 +24,7 @@ export default function Card({
         </div>
         <p>{description}</p>
         <div className="wrapper">
-          <DaysLeft days={daysLeft} fontSize={28} smallFontSize={15} />
+          <DaysLeft days={daysLeft} fontSize={40} smallFontSize={15} />
 
           <Button
             text="Select Reward"
