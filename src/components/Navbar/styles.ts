@@ -11,6 +11,10 @@ export const Container = styled.header`
   max-width: 100vw;
   min-height: 4rem;
   background-color: transparent;
+
+  @media screen and (max-width: 580px) {
+    padding: 2rem calc(100vw - 94%);
+  }
 `;
 
 export const Wrapper = styled.nav`
