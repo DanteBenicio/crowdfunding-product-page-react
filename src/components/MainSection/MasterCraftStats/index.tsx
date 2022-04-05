@@ -25,7 +25,9 @@ export default function MasterCraftStats() {
             <BookmarkWrapper>
               <Bookmark src={marked ? 'assets/icon-bookmark-green.svg' : 'assets/icon-bookmark.svg'} alt="bookmark icon" aria-hidden="true" />
             </BookmarkWrapper>
-            <span id="bookmark">Bookmark</span>
+            <span id="bookmark">
+              {marked ? 'Bookmarked' : 'Bookmark'}
+            </span>
           </BookmarkContainer>
         </ButtonsWrapper>
       </FirstCard>
