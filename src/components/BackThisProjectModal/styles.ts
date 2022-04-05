@@ -35,7 +35,7 @@ export const Content = styled.div`
     margin-bottom: 1rem;
 
     color: ${({ theme }) => theme.colors.neutral.darkGray};
-    font-size: clamp(0.8rem, 5vw, 0.8rem);
+    font-size: clamp(0.8rem, 5vw, 1rem);
     font-weight: ${({ theme }) => theme.fontWeights.medium};
   }
 
