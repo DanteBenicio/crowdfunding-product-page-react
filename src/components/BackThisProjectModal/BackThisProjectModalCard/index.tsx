@@ -4,7 +4,7 @@ import { BackThisProjectModalCardProps } from '../../../types/card';
 import Button from '../../Button';
 import DaysLeft from '../../DaysLeft';
 import {
-  ActionButtons, ActionButtonsWrapper, Card, CardHeader, CardWrapper,
+  ActionButtons, ActionButtonsWrapper, Card, CardHeader, CardWrapper, NamePledgeWrapper,
 } from './styles';
 
 export default function BackThisProjectModalCard({
@@ -82,6 +82,9 @@ export default function BackThisProjectModalCard({
           {noReward ? '' : <DaysLeft days={daysLeft} fontSize={18} smallFontSize={12} /> }
         </CardHeader>
         <p>{description}</p>
+        <div className="days_left_wrapper">
+          {noReward ? '' : <DaysLeft days={daysLeft} fontSize={18} smallFontSize={12} /> }
+        </div>
       </CardWrapper>
 
       {activeCard && (
