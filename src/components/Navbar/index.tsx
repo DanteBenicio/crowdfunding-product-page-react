@@ -1,8 +1,9 @@
+import { NavbarProps } from '../../types/navbar';
 import {
   Container, Wrapper, LogoWrapper, Logo, List, BurgerMenu,
 } from './styles';
 
-export default function Navbar() {
+export default function Navbar({ openBurger, setOpenBurger }: NavbarProps) {
   return (
     <Container>
       <Wrapper>
