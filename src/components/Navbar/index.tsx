@@ -1,5 +1,5 @@
 import {
-  Container, Wrapper, LogoWrapper, Logo, List,
+  Container, Wrapper, LogoWrapper, Logo, List, BurgerMenu,
 } from './styles';
 
 export default function Navbar() {
@@ -21,6 +21,9 @@ export default function Navbar() {
             <a href="#2">Get Started</a>
           </li>
         </List>
+        <BurgerMenu type="button" id="burger_menu" onClick={() => setOpenBurger(!openBurger)}>
+          <img src={openBurger ? 'assets/icon-close-menu.svg' : 'assets/icon-hamburger.svg'} alt="hamburger menu" />
+        </BurgerMenu>
       </Wrapper>
     </Container>
   );
