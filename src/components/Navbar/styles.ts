@@ -20,6 +20,22 @@ export const Wrapper = styled.nav`
   width: 100%;
 `;
 
+export const BurgerMenu = styled.button`
+  display: none;
+  width: ${({ theme }) => theme.pixelToRem(35)};
+  height: ${({ theme }) => theme.pixelToRem(30)};
+  background-color: transparent;
+  border: none;
+
+  > img {
+    width: 100%;
+  }
+
+  @media screen and (max-width: 768px) {
+    display: block;
+  }
+`;
+
 export const LogoWrapper = styled.div`
 `;
 
