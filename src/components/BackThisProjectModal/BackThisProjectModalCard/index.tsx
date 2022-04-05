@@ -29,8 +29,9 @@ export default function BackThisProjectModalCard({
 
     if (inputCheck.current?.dataset.set === 'false') {
       cardsWrapper.forEach((card) => {
-        const input = card.firstElementChild?.firstElementChild?.firstElementChild?.firstElementChild;
-        const inputDataSet = input?.dataset.set;
+        const input = card.firstElementChild?.firstElementChild?.firstElementChild?.firstElementChild as HTMLInputElement;
+        const inputDataSet = input?.getAttribute('data-set');
+
         if (inputDataSet === 'true') {
           input?.click();
         }
