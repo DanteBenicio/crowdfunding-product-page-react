@@ -89,7 +89,7 @@ export const BookmarkContainer = styled('div')<BookmarkContainerProps>`
   gap: 1rem;
 
   min-width: ${theme.pixelToRem(60)};
-  max-width: ${isMarked ? theme.pixelToRem(175) : theme.pixelToRem(170)};
+  max-width: ${isMarked ? theme.pixelToRem(180) : theme.pixelToRem(170)};
   width: 100%;
 
   background-color: ${isMarked ? 'hsl(176, 50%, 47%, 0.21)' : 'hsl(0deg, 0%, 84%)'};
@@ -126,7 +126,7 @@ export const BookmarkWrapper = styled.div`
   display: grid;
   place-items: center;
   border-radius: 50%;
-  height: auto;
+  height: ${({ theme }) => theme.pixelToRem(56)};
   background-color: ${({ theme }) => theme.colors.primary.darkCyan};
 
   @media screen and (max-width: 580px) {
