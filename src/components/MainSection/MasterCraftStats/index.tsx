@@ -23,7 +23,7 @@ export default function MasterCraftStats() {
 
           <BookmarkContainer onClick={() => setMarked(!marked)} isMarked={marked}>
             <BookmarkWrapper>
-              <Bookmark src="assets/icon-bookmark.svg" alt="bookmark icon" />
+              <Bookmark src={marked ? 'assets/icon-bookmark-green.svg' : 'assets/icon-bookmark.svg'} alt="bookmark icon" aria-hidden="true" />
             </BookmarkWrapper>
             <span id="bookmark">Bookmark</span>
           </BookmarkContainer>
