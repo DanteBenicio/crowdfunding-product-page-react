@@ -1,3 +1,5 @@
+import { useContext, useState } from 'react';
+import { AppContext } from '../../../context';
 import Button from '../../Button';
 import {
   Bookmark, BookmarkContainer, BookmarkWrapper, ButtonsWrapper,
