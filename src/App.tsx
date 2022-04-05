@@ -1,3 +1,4 @@
+import { useContext, useEffect, useState } from 'react';
 import Navbar from './components/Navbar';
 import FirstSection from './components/FirstSection';
 import MainSection from './components/MainSection';
