@@ -60,20 +60,23 @@ export default function BackThisProjectModalCard({
               data-set={activeCard}
               ref={inputCheck}
             />
-            <label
-              htmlFor={name.toLowerCase().replace(' ', '_')}
-            >
-              {name}
-            </label>
 
-            {noReward ? '' : (
-              <span id="pledge">
-                Pledge $
-                {pledgePrice}
-                {' '}
-                or more
-              </span>
-            )}
+            <NamePledgeWrapper>
+              <label
+                htmlFor={name.toLowerCase().replace(' ', '_')}
+              >
+                {name}
+              </label>
+
+              {noReward ? '' : (
+                <span id="pledge">
+                  Pledge $
+                  {pledgePrice}
+                  {' '}
+                  or more
+                </span>
+              )}
+            </NamePledgeWrapper>
           </div>
 
           {noReward ? '' : <DaysLeft days={daysLeft} fontSize={18} smallFontSize={12} /> }
