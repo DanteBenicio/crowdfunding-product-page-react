@@ -21,7 +21,7 @@ export default function MasterCraftStats() {
         <ButtonsWrapper>
           <Button text="Back this project" showModalFn={setShowBackThisProjectModal} />
 
-          <BookmarkContainer>
+          <BookmarkContainer onClick={() => setMarked(!marked)} isMarked={marked}>
             <BookmarkWrapper>
               <Bookmark src="assets/icon-bookmark.svg" alt="bookmark icon" />
             </BookmarkWrapper>
