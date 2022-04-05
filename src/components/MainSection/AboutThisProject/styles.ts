@@ -8,6 +8,10 @@ export const Container = styled.div`
   background-color: white;
   border-radius: 0.5rem;
   box-shadow: 0 0 1rem rgba(0,0,0,0.1);
+
+  @media screen and (max-width: 580px) {
+    padding: 1.5rem;
+  }
 `;
 
 export const ProjectInfo = styled.div`

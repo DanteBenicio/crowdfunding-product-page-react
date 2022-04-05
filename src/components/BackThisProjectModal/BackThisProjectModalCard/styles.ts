@@ -27,6 +27,7 @@ export const Card = styled('div')<CardProps>`
 `;
 
 export const CardWrapper = styled.div`
+  position: relative;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -40,6 +41,20 @@ export const CardWrapper = styled.div`
     font-size: clamp(0.8rem, 5vw, 1rem);
     font-weight: ${({ theme }) => theme.fontWeights.medium};
   }
+
+  > .days_left_wrapper {
+    display: none;
+  }
+
+  @media screen and (max-width: 580px) {
+    > p {
+      padding-left: 0;
+    }
+
+    > .days_left_wrapper {
+      display: block;
+    }
+  }
 `;
 
 export const CardHeader = styled.div`
@@ -51,12 +66,7 @@ export const CardHeader = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 1rem;
-
-    span {
-      color: ${({ theme }) => theme.colors.primary.moderateCyan};
-      font-weight: ${({ theme }) => theme.fontWeights.medium};
-    }
+    gap: 1.5rem;
 
     > input[type="radio"] {
       width: 20px;
@@ -80,23 +90,44 @@ export const CardHeader = styled.div`
         transform: scale(1)
       }
     }
+  }
 
-    > label {
-      font-size: clamp(0.7rem, 5vw, 1rem);
-      font-weight: ${({ theme }) => theme.fontWeights.large};
-
-      cursor: pointer;
-
-      transition: all 0.3s ease;
-
-      &:hover {
-        color: ${({ theme }) => theme.colors.primary.moderateCyan};
-      }
-
-      &:hover ~ input {
-        border-color: ${({ theme }) => theme.colors.primary.moderateCyan};
-       }
+  @media screen and (max-width: 580px) {
+    > span {
+      display: none;
     }
+
+    > .card_name_wrapper {
+      gap: 1rem;
+    }
+  }
+`;
+
+export const NamePledgeWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+
+  > span {
+    color: ${({ theme }) => theme.colors.primary.moderateCyan};
+    font-weight: ${({ theme }) => theme.fontWeights.medium};
+  }
+
+  label {
+    font-size: clamp(0.7rem, 5vw, 1rem);
+    font-weight: ${({ theme }) => theme.fontWeights.large};
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: ${({ theme }) => theme.colors.primary.moderateCyan};
+    }
+  }
+
+  @media screen and (max-width: 580px) {
+    flex-direction: column;
   }
 `;
 
@@ -115,6 +146,11 @@ export const ActionButtons = styled.div`
     font-size: clamp(0.8rem, 5vw, 1rem);
     font-weight: ${({ theme }) => theme.fontWeights.medium};
   }
+
+  @media screen and (max-width: 580px) {
+    flex-direction: column;
+    gap: 1rem;
+  }
 `;
 
 export const ActionButtonsWrapper = styled.div`
@@ -126,8 +162,7 @@ export const ActionButtonsWrapper = styled.div`
 
   > #pledge_input {
     position: relative;
-    max-width: 100px;
-    width: 100%;
+    width: 100px;
     padding: 1rem;
     border-radius: 2rem;
     border: 1px solid ${({ theme }) => theme.colors.neutral.darkGray};
@@ -160,9 +195,6 @@ export const ActionButtonsWrapper = styled.div`
       margin: 0;
     }
 
-
-
-
     &:hover {
       border-color: ${({ theme }) => theme.colors.primary.moderateCyan};
     }
@@ -170,6 +202,18 @@ export const ActionButtonsWrapper = styled.div`
     &:focus {
       border-color: transparent;
       outline: 1px solid ${({ theme }) => theme.colors.primary.darkCyan};
+    }
+  }
+
+  @media screen and (max-width: 580px) {
+    justify-content: center;
+  }
+
+  @media screen and (max-width: 400px) {
+    flex-direction: column;
+
+    > #pledge_input {
+      width: 150px;
     }
   }
 `;

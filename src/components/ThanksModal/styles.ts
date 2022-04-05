@@ -4,6 +4,7 @@ export const Overlay = styled.div`
   position: fixed;
   display: grid;
   place-items: center;
+  padding: 0 1rem;
 
   max-width: 100vw;
   min-height: 100vh;

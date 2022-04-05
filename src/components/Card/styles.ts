@@ -23,7 +23,7 @@ export const Wrapper = styled.div`
   align-items: center;
   flex-direction: column;
 
-  gap: 2rem;
+  gap: 1.5rem;
 
   > p {
     color: ${({ theme }) => theme.colors.neutral.darkGray};
@@ -48,6 +48,21 @@ export const Wrapper = styled.div`
 
       &:hover {
         color: ${({ theme }) => theme.colors.primary.darkCyan};
+      }
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    > .wrapper {
+      align-items: flex-start;
+      flex-direction: column;
+
+      > h3 {
+        margin-bottom: 0.5rem;
+      }
+
+      > span:first-child {
+        margin-bottom: 1rem;
       }
     }
   }

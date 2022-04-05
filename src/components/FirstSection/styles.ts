@@ -7,4 +7,8 @@ export const Background = styled.section`
   background: url(assets/image-hero-desktop.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+
+  @media screen and (max-width: 580px) {
+    background: url(assets/image-hero-mobile.jpg);
+  }
 `;
