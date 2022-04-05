@@ -1,20 +1,35 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 type ContainerProps = {
   outOfStock: boolean
 }
 
 export const Container = styled('div')<ContainerProps>`
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  ${({ theme, outOfStock }) => css`
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-  width: 100%;
+    width: 100%;
 
-  padding: 2rem;
+    padding: 2rem;
 
-  border: 1px solid ${({ theme }) => theme.colors.neutral.lightGray};
-  border-radius: ${({ theme }) => theme.pixelToRem(8)};
+    border: 1px solid ${theme.colors.neutral.lightGray};
+    border-radius: ${theme.pixelToRem(8)};
+
+    ${outOfStock && css`
+      filter: opacity(50%);
+      cursor: not-allowed;
+
+      .wrapper {
+        > #pledge_price,
+        > button {
+          cursor: not-allowed;
+          z-index: -1;
+        }
+      }
+    `}
+  `};
 `;
 
 export const Wrapper = styled.div`
