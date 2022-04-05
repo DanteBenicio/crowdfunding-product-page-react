@@ -22,7 +22,7 @@ export default function BackThisProjectModal() {
           <BackThisProjectModalCard {...cardContentNoReward} />
           <BackThisProjectModalCard {...cardContent1} />
           <BackThisProjectModalCard {...cardContent2} />
-          <BackThisProjectModalCard {...cardContent3} />
+          <BackThisProjectModalCard {...cardContent3} outOfStock />
         </CardWrapper>
       </Content>
     </Overlay>
